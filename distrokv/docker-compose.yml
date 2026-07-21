@@ -1,0 +1,8 @@
+services:
+  node:
+    build: ./storage-node
+    environment:
+      NODE_ID: ${HOSTNAME:-node}
+      PORT: 8080
+    ports:
+      - "8080-8082:8080"
